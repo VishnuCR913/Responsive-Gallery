@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="viewbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="jquery.viewbox.min.js"></script>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #242A52;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+  color: #fff;
+
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+</div>
+
+<!-- Photo Grid -->
+<div class="container">
+<div class="row"> 
+  <div class="column">
+    <a href="#" data-lightbox="lb1" class="jlr_item"><img src="img/1.jpg" class="jlr_img"></a>
+    <a href="img/2.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/2.jpg" class="jlr_img"></a>
+
+    <a href="img/3.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/3.jpg" class="jlr_img"></a>
+
+    <a href="img/4.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/4.jpg" class="jlr_img"></a>
+
+    
+
+   
+  </div>
+  <div class="column">
+    <a href="img/5.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/5.jpg" class="jlr_img"></a>
+    <a href="img/6.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/6.jpg" class="jlr_img"></a>
+
+    <a href="img/7.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/7.jpg" class="jlr_img"></a>
+
+    <a href="img/8.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/8.jpg" class="jlr_img"></a>
+
+    
+
+    
+  </div>  
+  <div class="column">
+    <a href="img/9.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/9.jpg" class="jlr_img"></a>
+    <a href="img/10.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/10.jpg" class="jlr_img"></a>
+
+    <a href="img/11.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/11.jpg" class="jlr_img"></a>
+    
+
+
+  </div>
+  <div class="column">
+    <a href="img/8.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/8.jpg" class="jlr_img"></a>
+    <a href="img/3.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/3.jpg" class="jlr_img"></a>
+    <a href="img/10.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/10.jpg" class="jlr_img"></a>
+    <a href="img/2.jpg" data-lightbox="lb1" class="jlr_item"><img src="img/2.jpg" class="jlr_img"></a>
+
+  </div>
+</div>
+</div>
+</body>
+<script>
+$(function(){
+	$('.jlr_item').viewbox({
+		setTitle: true,
+		margin: 20,
+		resizeDuration: 300,
+		openDuration: 200,
+		closeDuration: 200,
+		closeButton: true,
+		navButtons: true,
+		closeOnSideClick: true,
+		nextOnContentClick: true
+	});
+});
+</script>
+</html>
